@@ -4,6 +4,10 @@ A local observatory for the machine and the model running on it.
 
 When you train or serve a model on your own computer, Lumen records GPU load, VRAM, power, temperature, CPU, memory, and disk, and keeps each process as a session you can reopen. The dashboard is the instrument panel. The database never leaves the machine.
 
+![Live view: GPU load, VRAM, power, and an active training run](docs/live.png)
+
+![A saved run, with the machine timeline and the loss curve](docs/run.png)
+
 ```bash
 lumen --demo
 ```
