@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumen</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%2308090b'/%3E%3Crect x='3' y='3' width='10' height='10' fill='%23d6ff4a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#/">
+        <span class="brand-mark"></span>
+        <span class="brand-name">Lumen</span>
+      </a>
+      <span class="brand-tag">Observatory</span>
+      <div class="top-spacer"></div>
+      <div id="demo-pill" class="pill hidden">Demo data</div>
+      <div id="conn" class="conn"><span class="dot"></span><span id="conn-label">Connecting</span></div>
+      <time id="clock"></time>
+    </header>
+    <aside class="side">
+      <nav class="nav">
+        <a href="#/" id="nav-live"><span>Live</span></a>
+        <a href="#/runs" id="nav-runs"><span>Runs</span><span id="run-count" class="count"></span></a>
+      </nav>
+      <div class="side-block">
+        <p class="kicker">Machine</p>
+        <p id="host-name" class="side-strong">—</p>
+        <p id="host-cpu" class="side-muted"></p>
+        <p id="host-meta" class="side-muted"></p>
+        <p id="host-up" class="side-muted"></p>
+      </div>
+      <div id="side-meters"></div>
+      <div class="side-spacer"></div>
+      <p class="side-foot" id="foot"><span id="ver">v0.1.0</span><br />Metrics stay on this machine.</p>
+    </aside>
+    <main id="main">
+      <p class="quiet pad">Taking the first sample…</p>
+    </main>
+  </div>
+  <noscript>Lumen needs JavaScript to draw the live instruments.</noscript>
+  <script src="/static/app.js"></script>
+</body>
+</html>
